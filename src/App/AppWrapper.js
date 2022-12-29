@@ -6,12 +6,12 @@ import english from "../utils/lang/en";
 import { LanguageContext } from "../providers/multilingualContext";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const AppWrapper = () => {
-  const messages = {
-    pl: polish,
-    en: english,
-  };
+const messages = {
+  pl: polish,
+  en: english,
+};
 
+const AppWrapper = () => {
   const [language, setLanguage] = useState("en");
 
   const handleChangeLanguage = () => {
