@@ -9,10 +9,11 @@ const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleRemoveClick = () => {
     removeAlbum(album.id);
   };
+  console.log(album)
   return (
     <tr>
       <th scope="row">{album.id}</th>
-      <td>{album.name}</td>
+      <td>{album.name} {album.bestOfTheBest === true && ('Best of the best')}</td>
       <td>{album.createdAt}</td>
       <td>
         <Button color="warning" onClick={handleCheckboxClick}>

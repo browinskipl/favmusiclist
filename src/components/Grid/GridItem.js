@@ -17,7 +17,7 @@ const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
     >
       <CardBody>
         <div className="text-center">
-          Album name: {album.name}
+          Album name: {album.name} {album.bestOfTheBest === true && ('Best of the best')}
         </div>
         <div className="text-center">
           Created at: {album.createdAt}
