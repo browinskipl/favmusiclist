@@ -1,3 +1,12 @@
 {
-  "table": "Tabela"
+  "table": "Tabela",
+  "grid": "Grid",
+  "list": "Lista",
+  "sortById": "Sortuj po ID",
+  "sortByName": "Sortuj po nazwie",
+  "sortByDate": "Sortuj by dacie",
+  "addToList": "Dodaj do listy",
+  "createdAt": "Stworzono",
+  "bestOfTheBest": "Najlepsze z najlepszych",
+  "remove": "Usuń"
 }

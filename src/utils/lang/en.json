@@ -1,4 +1,12 @@
 {
-    "table": "Table"
-  }
-  
+  "table": "Table",
+  "grid": "Grid",
+  "list": "List",
+  "sortById": "Sort by ID",
+  "sortByName": "Sort by name",
+  "sortByDate": "Sort by date",
+  "addToList": "Add to list",
+  "createdAt": "Created at",
+  "bestOfTheBest": "Best of the best",
+  "remove": "Remove"
+}

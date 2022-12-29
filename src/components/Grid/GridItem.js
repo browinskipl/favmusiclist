@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Card, CardBody } from "reactstrap";
+import types from "../../utils/types/types";
 
 const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleCheckboxClick = () => {
@@ -16,12 +17,12 @@ const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
       style={{ display: "flex", alignItems: "center", gap: "10px" }}
     >
       <CardBody>
+        <div className="text-center">ID: {album.id}</div>
         <div className="text-center">
-          Album name: {album.name} {album.bestOfTheBest === true && ('Best of the best')}
+          Album name: {album.name}{" "}
+          {album.bestOfTheBest === true && "Best of the best"}
         </div>
-        <div className="text-center">
-          Created at: {album.createdAt}
-        </div>
+        <div className="text-center">Created at: {album.createdAt}</div>
         <div style={{ display: "flex", gap: "10px" }}>
           <Button color="warning" onClick={handleCheckboxClick}>
             Set as best of the best
@@ -37,3 +38,5 @@ const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
 };
 
 export default GridItem;
+
+GridItem.propTypes = types;

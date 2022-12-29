@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { Button, Form, FormGroup, Label, Input, Card, Col } from "reactstrap";
+import { FormattedMessage } from "react-intl";
 
 const NewAlbumForm = ({ addAlbum }) => {
   const [album, setAlbum] = useState({
@@ -43,7 +44,7 @@ const NewAlbumForm = ({ addAlbum }) => {
             onChange={handleAlbumInputChange}
           />
         </FormGroup>
-        <Button color="primary">Add to List</Button>
+        <Button color="primary"><FormattedMessage id="addToList" /></Button>
       </Form>
       </Col>
     </Card>

@@ -1,14 +1,15 @@
 import React from "react";
-import Album from "./GridItem";
 import { Row, Col } from "reactstrap";
+import GridItem from "./GridItem";
+import types from "../../utils/types/types";
 
 const GridWrapper = ({ albums, removeAlbum, toggleIsTheBest }) => {
   return (
-    <Row>
+    <Row className="m-2">
       <h2 className="text-center">List:</h2>
       {albums.map((album) => (
         <Col className="p-2" sm="6">
-          <Album
+          <GridItem
             key={album.id}
             album={album}
             removeAlbum={removeAlbum}
@@ -21,3 +22,5 @@ const GridWrapper = ({ albums, removeAlbum, toggleIsTheBest }) => {
 };
 
 export default GridWrapper;
+
+GridWrapper.propTypes = types;

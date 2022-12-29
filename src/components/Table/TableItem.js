@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "reactstrap";
+import types from "../../utils/types/types";
 
 const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleCheckboxClick = () => {
@@ -9,7 +10,6 @@ const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleRemoveClick = () => {
     removeAlbum(album.id);
   };
-  console.log(album)
   return (
     <tr>
       <th scope="row">{album.id}</th>
@@ -30,3 +30,5 @@ const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
 };
 
 export default TableItem;
+
+TableItem.propTypes = types;
