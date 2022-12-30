@@ -7,6 +7,9 @@ import Header from "../components/Header/Header";
 import useSortHook from "../hooks/useSortHook";
 import useAlbumsHook from "../hooks/useAlbumsHook";
 import Options from "../components/Options/Options";
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
 
 const Home = () => {
   const { albums, setAlbums, addAlbum, removeAlbum, toggleIsTheBest } = useAlbumsHook();
@@ -44,6 +47,7 @@ const Home = () => {
         handleSort={handleSort}
       />
       {handleView}
+      <ToastContainer />
     </div>
   );
 };

@@ -10,5 +10,6 @@
   "createdAt": "Stworzono",
   "bestOfTheBest": "Najlepsze z najlepszych",
   "setAsBestOfTheBest": "Najlepsze z najlepszych",
-  "remove": "Usuń"
+  "remove": "Usuń",
+  "saveSuccess": "Zapisano pomyślnie"
 }

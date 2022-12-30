@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { LOCAL_STORAGE_KEY } from "../config";
+import { toast } from 'react-toastify';
+import { FormattedMessage } from "react-intl";
 
 const useAlbumsHook = () => {
     const [albums, setAlbums] = useState(() => {
@@ -12,6 +14,10 @@ const useAlbumsHook = () => {
 
     const addAlbum = (album) => {
         setAlbums([album, ...albums]);
+        toast.success(<FormattedMessage id="saveSuccess" />, {
+            position: toast.POSITION.TOP_RIGHT
+        });
+
     };
 
     const toggleIsTheBest = (id) => {
@@ -30,6 +36,9 @@ const useAlbumsHook = () => {
 
     const removeAlbum = (id) => {
         setAlbums(albums.filter((album) => album.id !== id));
+        toast.success(<FormattedMessage id="saveSuccess" />, {
+            position: toast.POSITION.TOP_RIGHT
+        });
     };
 
     return { albums, setAlbums, addAlbum, removeAlbum, toggleIsTheBest }

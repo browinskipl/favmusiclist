@@ -10,5 +10,6 @@
   "createdAt": "Created at",
   "bestOfTheBest": "Best of the best",
   "setAsBestOfTheBest": "Set as best of the best",
-  "remove": "Remove"
+  "remove": "Remove",
+  "saveSuccess": "Save successful"
 }
