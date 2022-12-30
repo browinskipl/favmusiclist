@@ -61,23 +61,22 @@ const Home = () => {
     return a.createdAt.localeCompare(b.createdAt);
   };
 
-  const handleView = () => {
-    return isGrid ? (
-      <GridWrapper
-        albums={albums}
-        removeAlbum={removeAlbum}
-        toggleIsTheBest={toggleIsTheBest}
-        isGrid={isGrid}
-      />
-    ) : (
-      <TableWrapper
-        albums={albums}
-        removeAlbum={removeAlbum}
-        toggleIsTheBest={toggleIsTheBest}
-        isGrid={isGrid}
-      />
-    )
-  }
+  const handleView = isGrid ? (
+    <GridWrapper
+      albums={albums}
+      removeAlbum={removeAlbum}
+      toggleIsTheBest={toggleIsTheBest}
+      isGrid={isGrid}
+    />
+  ) : (
+    <TableWrapper
+      albums={albums}
+      removeAlbum={removeAlbum}
+      toggleIsTheBest={toggleIsTheBest}
+      isGrid={isGrid}
+    />
+  )
+
 
   return (
     <div className="App">
@@ -91,7 +90,7 @@ const Home = () => {
         sortByDate={sortByDate}
         handleSort={handleSort}
       />
-      {handleView()}
+      {handleView}
     </div>
   );
 };
