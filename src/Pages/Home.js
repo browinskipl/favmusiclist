@@ -10,7 +10,7 @@ import Options from "../components/Options/Options";
 
 const Home = () => {
   const { albums, setAlbums, addAlbum, removeAlbum, toggleIsTheBest } = useAlbumsHook();
-  const { handleSort, sortByName, sortById, sortByDate } = useSortHook(albums, setAlbums);
+  const { handleSort } = useSortHook(albums, setAlbums);
   const [isGrid, setIsGrid] = useState(false);
 
   useEffect(() => {
@@ -41,9 +41,6 @@ const Home = () => {
       <Options
         isGrid={isGrid}
         setIsGrid={setIsGrid}
-        sortByName={sortByName}
-        sortById={sortById}
-        sortByDate={sortByDate}
         handleSort={handleSort}
       />
       {handleView}

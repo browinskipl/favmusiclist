@@ -2,15 +2,14 @@ import React from "react";
 import { Button } from "reactstrap";
 import { FormattedMessage } from "react-intl";
 import { PropTypes } from "prop-types";
+import useSortHook from "../../hooks/useSortHook";
 
 const Options = ({
   isGrid,
   setIsGrid,
-  sortByName,
-  sortById,
-  sortByDate,
   handleSort,
 }) => {
+  const { sortByName, sortById, sortByDate } = useSortHook();
   return (
     <div className="d-flex justify-content-center p-2 gap-2">
       <Button type="button" onClick={() => setIsGrid(!isGrid)}>
@@ -38,8 +37,5 @@ export default Options;
 Options.propTypes = {
   isGrid: PropTypes.bool,
   setIsGrid: PropTypes.func,
-  sortByName: PropTypes.func,
-  sortById: PropTypes.func,
-  sortByDate: PropTypes.func,
   handleSort: PropTypes.func,
 };
