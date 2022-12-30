@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card, CardBody } from "reactstrap";
 import types from "../../utils/types/types";
+import { FormattedMessage } from "react-intl";
 
 const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleCheckboxClick = () => {
@@ -19,17 +20,17 @@ const GridItem = ({ album, toggleIsTheBest, removeAlbum }) => {
       <CardBody>
         <div className="text-center">ID: {album.id}</div>
         <div className="text-center">
-          Album name: {album.name}{" "}
-          {album.bestOfTheBest === true && "Best of the best"}
+          <FormattedMessage id="albumName" />: {album.name}{" "}
+          {album.bestOfTheBest === true && <FormattedMessage id="bestOfTheBest" />}
         </div>
-        <div className="text-center">Created at: {album.createdAt}</div>
+        <div className="text-center"><FormattedMessage id="createdAt" />: {album.createdAt}</div>
         <div style={{ display: "flex", gap: "10px" }}>
           <Button color="warning" onClick={handleCheckboxClick}>
-            Set as best of the best
+            <FormattedMessage id="setAsBestOfTheBest" />
           </Button>
 
           <Button color="danger" onClick={handleRemoveClick}>
-            Remove
+            <FormattedMessage id="remove" />
           </Button>
         </div>
       </CardBody>

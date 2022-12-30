@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "reactstrap";
 import types from "../../utils/types/types";
+import { FormattedMessage } from "react-intl";
 
 const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   const handleCheckboxClick = () => {
@@ -13,16 +14,16 @@ const TableItem = ({ album, toggleIsTheBest, removeAlbum }) => {
   return (
     <tr>
       <th scope="row">{album.id}</th>
-      <td>{album.name} {album.bestOfTheBest === true && ('Best of the best')}</td>
+      <td>{album.name} {album.bestOfTheBest === true && (<FormattedMessage id="bestOfTheBest" />)}</td>
       <td>{album.createdAt}</td>
       <td>
         <Button color="warning" onClick={handleCheckboxClick}>
-          Set as best of the best
+          <FormattedMessage id="setAsBestOfTheBest" />
         </Button>
       </td>
       <td>
         <Button color="danger" onClick={handleRemoveClick}>
-          Remove
+          <FormattedMessage id="remove" />
         </Button>
       </td>
     </tr>

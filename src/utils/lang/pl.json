@@ -1,4 +1,5 @@
 {
+  "albumName": "Nazwa albumu",
   "table": "Tabela",
   "grid": "Grid",
   "list": "Lista",
@@ -8,5 +9,6 @@
   "addToList": "Dodaj do listy",
   "createdAt": "Stworzono",
   "bestOfTheBest": "Najlepsze z najlepszych",
+  "setAsBestOfTheBest": "Najlepsze z najlepszych",
   "remove": "Usuń"
 }

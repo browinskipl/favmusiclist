@@ -3,11 +3,12 @@ import { Table } from "reactstrap";
 import TableHeaders from "./TableHeaders";
 import TableItem from "./TableItem";
 import types from "../../utils/types/types";
+import { FormattedMessage } from "react-intl";
 
 const TableWrapper = ({ albums, removeAlbum, toggleIsTheBest }) => {
   return (
     <>
-      <h2 className="text-center">Table:</h2>
+      <h2 className="text-center"><FormattedMessage id="table" />:</h2>
       <Table responsive bordered>
         <TableHeaders />
         <tbody>
